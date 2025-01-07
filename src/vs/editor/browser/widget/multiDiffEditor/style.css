@@ -139,3 +139,65 @@
 		}
 	}
 }
+
+/* Update cursor styles to match Cursor AI */
+.monaco-component.multiDiffEditor .cursor {
+	border-left: 2px solid var(--vscode-cursor-foreground);
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+	0%, 50% {
+		opacity: 1;
+	}
+	51%, 100% {
+		opacity: 0;
+	}
+}
+
+/* Change editor themes to be more like Cursor AI */
+.monaco-component.multiDiffEditor .editor {
+	background-color: var(--vscode-editor-background);
+	color: var(--vscode-editor-foreground);
+}
+
+.monaco-component.multiDiffEditor .editor .line-numbers {
+	color: var(--vscode-editorLineNumber-foreground);
+}
+
+.monaco-component.multiDiffEditor .editor .selection {
+	background-color: var(--vscode-editor-selectionBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .word-highlight {
+	background-color: var(--vscode-editor-wordHighlightBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .word-highlight-strong {
+	background-color: var(--vscode-editor-wordHighlightStrongBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .find-match {
+	background-color: var(--vscode-editor-findMatchHighlightBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .current-find-match {
+	background-color: var(--vscode-editor-findMatchBackground);
+	border: 1px solid var(--vscode-editor-findMatchBorder);
+}
+
+.monaco-component.multiDiffEditor .editor .hover-highlight {
+	background-color: var(--vscode-editor-hoverHighlightBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .line-highlight {
+	background-color: var(--vscode-editor-lineHighlightBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .range-highlight {
+	background-color: var(--vscode-editor-rangeHighlightBackground);
+}
+
+.monaco-component.multiDiffEditor .editor .symbol-highlight {
+	background-color: var(--vscode-editor-symbolHighlightBackground);
+}
