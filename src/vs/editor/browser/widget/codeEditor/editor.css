@@ -117,3 +117,65 @@
 	text-decoration: line-through;
 	text-decoration-color: var(--vscode-editor-foreground, inherit);
 }
+
+/* Update cursor styles to match Cursor AI */
+.monaco-editor .cursor {
+	border-left: 2px solid var(--vscode-cursor-foreground);
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+	0%, 50% {
+		opacity: 1;
+	}
+	51%, 100% {
+		opacity: 0;
+	}
+}
+
+/* Change editor themes to be more like Cursor AI */
+.monaco-editor .editor {
+	background-color: var(--vscode-editor-background);
+	color: var(--vscode-editor-foreground);
+}
+
+.monaco-editor .editor .line-numbers {
+	color: var(--vscode-editorLineNumber-foreground);
+}
+
+.monaco-editor .editor .selection {
+	background-color: var(--vscode-editor-selectionBackground);
+}
+
+.monaco-editor .editor .word-highlight {
+	background-color: var(--vscode-editor-wordHighlightBackground);
+}
+
+.monaco-editor .editor .word-highlight-strong {
+	background-color: var(--vscode-editor-wordHighlightStrongBackground);
+}
+
+.monaco-editor .editor .find-match {
+	background-color: var(--vscode-editor-findMatchHighlightBackground);
+}
+
+.monaco-editor .editor .current-find-match {
+	background-color: var(--vscode-editor-findMatchBackground);
+	border: 1px solid var(--vscode-editor-findMatchBorder);
+}
+
+.monaco-editor .editor .hover-highlight {
+	background-color: var(--vscode-editor-hoverHighlightBackground);
+}
+
+.monaco-editor .editor .line-highlight {
+	background-color: var(--vscode-editor-lineHighlightBackground);
+}
+
+.monaco-editor .editor .range-highlight {
+	background-color: var(--vscode-editor-rangeHighlightBackground);
+}
+
+.monaco-editor .editor .symbol-highlight {
+	background-color: var(--vscode-editor-symbolHighlightBackground);
+}

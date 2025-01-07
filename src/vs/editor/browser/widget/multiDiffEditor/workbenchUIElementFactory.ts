@@ -14,6 +14,7 @@ import { URI } from '../../../../base/common/uri.js';
  */
 export interface IWorkbenchUIElementFactory {
 	createResourceLabel?(element: HTMLElement): IResourceLabel;
+	createAICompletionWidget?(element: HTMLElement): IAICompletionWidget;
 }
 
 export interface IResourceLabel extends IDisposable {
@@ -22,4 +23,8 @@ export interface IResourceLabel extends IDisposable {
 
 export interface IResourceLabelOptions {
 	strikethrough?: boolean;
+}
+
+export interface IAICompletionWidget extends IDisposable {
+	showCompletions(completions: string[]): void;
 }
