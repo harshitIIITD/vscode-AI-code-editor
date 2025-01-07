@@ -385,6 +385,9 @@ export class CodeEditorWidget extends Disposable implements editorBrowser.ICodeE
 		}));
 
 		this._codeEditorService.addCodeEditor(this);
+
+		// Add AI-powered code completion logic
+		this._registerAICompletion();
 	}
 
 	public writeScreenReaderContent(reason: string): void {
@@ -1962,6 +1965,35 @@ export class CodeEditorWidget extends Disposable implements editorBrowser.ICodeE
 		if (this._updateCounter === 0) {
 			this._onEndUpdate.fire();
 		}
+	}
+
+	// Integrate AI service communication layer for code completion
+	private _registerAICompletion(): void {
+		// Implement the communication layer with the AI service
+		// This can be done using HTTP requests or WebSockets
+		// Example:
+		// const aiServiceUrl = 'https://api.example.com/ai-completion';
+		// const aiServiceToken = 'your-api-token';
+		// const aiService = new AIService(aiServiceUrl, aiServiceToken);
+		// this._aiService = aiService;
+
+		// Display AI-generated suggestions in the editor's suggestion widget
+		this._registerAICompletionWidget();
+	}
+
+	private _registerAICompletionWidget(): void {
+		// Implement the logic to display AI-generated suggestions in the editor's suggestion widget
+		// Example:
+		// this._aiService.onSuggestions((suggestions) => {
+		// 	this._showAISuggestions(suggestions);
+		// });
+	}
+
+	private _showAISuggestions(suggestions: string[]): void {
+		// Implement the logic to display AI-generated suggestions in the editor's suggestion widget
+		// Example:
+		// const suggestionWidget = this._getSuggestionWidget();
+		// suggestionWidget.showSuggestions(suggestions);
 	}
 }
 

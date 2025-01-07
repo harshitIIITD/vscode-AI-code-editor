@@ -60,6 +60,20 @@ export class EmbeddedCodeEditorWidget extends CodeEditorWidget {
 		objects.mixin(this._overwriteOptions, newOptions, true);
 		super.updateOptions(this._overwriteOptions);
 	}
+
+	// Add logic to handle AI-powered code refactoring suggestions
+	handleAIRefactoringSuggestions(suggestions: any): void {
+		// Implement logic to handle AI-powered code refactoring suggestions
+		// This is a placeholder function and should be implemented with actual logic
+		console.log("AI Refactoring Suggestions: ", suggestions);
+	}
+
+	// Support new UI elements and interactions for the AI code editor
+	addCustomUIElement(element: HTMLElement): void {
+		// Implement logic to add custom UI elements to the editor
+		// This is a placeholder function and should be implemented with actual logic
+		this._parentEditor.getDomNode()?.appendChild(element);
+	}
 }
 
 export function getOuterEditor(accessor: ServicesAccessor): ICodeEditor | null {
